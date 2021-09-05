@@ -1,5 +1,8 @@
 import React from 'react'
 import illus from '../images/illustration-working.svg';
+import brcog from '../images/icon-brand-recognition.svg'
+import idr from '../images/icon-detailed-records.svg'
+import ifc from '../images/icon-fully-customizable.svg'
 
 const Main = () => {
     return (
@@ -23,7 +26,12 @@ const Main = () => {
                 </div>
 
                 <div className='stat-flex  container'>
+                    
                     <div className='cols' id='fir'>
+                        <div className='brand-icon'>
+                            <img src={brcog} alt=''/>
+                        </div>
+                        
                         <h3>Brand Recognition</h3>
                         <p>Boost your brand recognition with each click. 
                             Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
@@ -32,6 +40,10 @@ const Main = () => {
                         
                     </div>
                     <div className='cols' id='sec'>
+                        <div className='brand-icon'>
+                            <img src={idr} alt=''/>
+                        </div>
+                        
                         <h3>Detailed Records</h3>
                         <p>Gain insights into who is clicking your links. Knowing when and where people 
                             engage with your content helps inform better decisions.</p>
@@ -40,6 +52,10 @@ const Main = () => {
                         
                     </div>
                     <div className='cols' id='thir'>
+                        <div className='brand-icon-3'>
+                            <img src={ifc} alt=''/>   
+                        </div>
+                        
                         <h3>Fully Cusomizable</h3>
                         <p>Improve brand awareness and content discoverability through 
                             customizable links, supercharging audience engagement.</p>

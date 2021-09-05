@@ -43,8 +43,33 @@ body {
   color: hsl(260, 8%, 14%);
 }
 
-.navbar-toggler-icon{
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.ham{
+  font-size: 30px;
+  display: none;
+}
+
+.no-display{
+  display: none;
+}
+.mini-nav{
+  background: hsl(257, 27%, 26%);
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+}
+.mini-nav a{
+  color: #fff;
+}
+.mini-nav a:hover{
+  color: hsl(260, 8%, 14%);
+}
+.mini-nav .signup{
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 9px 25px;
 }
 
 
@@ -98,7 +123,7 @@ body {
 .cols{
   background-color: #fff;
   font-size:medium;
-  padding: 80px 30px 30px 30px;
+  padding: 5px 30px 30px 30px;
   /* margin: 10px; */
 }
 #fir{
@@ -175,8 +200,31 @@ footer p{
   font-size: small;
 }
 
+.brand-icon{
+  background: hsl(257, 27%, 26%);
+  border-radius: 50%;
+  width: 70px;
+  padding: 15px;
+  position: relative;
+  top: -50px;
+}
+.brand-icon-3{
+  background: hsl(257, 27%, 26%);
+  border-radius: 50%;
+  width: 78px;
+  padding: 15px;
+  position: relative;
+  top: -50px;
+}
+
 
 @media only screen and (max-width: 414px) {
+  .ham{
+    font-size: 30px;
+    display: initial;
+  }
+
+
   .ad-container{
     flex-direction: column-reverse;
   }
@@ -190,13 +238,13 @@ footer p{
     background-color: hsl(180, 66%, 49%);
     border-top: initial;
     border-bottom: initial;
-    border-left: 151px solid rgb(240, 240, 240);
+    border-left: 146px solid rgb(240, 240, 240);
     border-right: 151px solid rgb(240, 240, 240);
   }
   .cols{
     background-color: #fff;
     font-size:medium;
-    padding: 80px 30px 30px 30px;
+    padding: 5px 30px 30px 30px;
     /* margin: 10px; */
   }
   #fir{
@@ -249,5 +297,24 @@ footer p{
   }
   footer .company{
     padding-bottom: 20px;
+  }
+
+  .brand-icon{
+    background: hsl(257, 27%, 26%);
+    border-radius: 50%;
+    width: 70px;
+    padding: 15px;
+    position: relative;
+    top: -40px;
+    left: 35%;
+  }
+  .brand-icon-3{
+    background: hsl(257, 27%, 26%);
+    border-radius: 50%;
+    width: 78px;
+    padding: 15px;
+    position: relative;
+    top: -40px;
+    left: 35%;
   }
 }
