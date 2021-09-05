@@ -1,13 +1,253 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  cursor: pointer;
+}
+.btn:hover {
+  color: #fff;
+  background: hsl(180, 37%, 73%);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: hsl(257, 7%, 63%);
+  background-color: #fff
+}
+.navbar{
+  margin: 20px 0;
+}
+.navbar-nav .nav-item{
+  margin-left: 10px;
+}
+.navbar-nav .nav-item .signup{
+  background-color: hsl(180, 66%, 49%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 9px 25px;
+}
+.navbar a{
+  color: hsl(257, 7%, 63%);
+  font-size: 14px;
+  font-weight: bold;
+}
+.navbar a:hover{
+  color: hsl(260, 8%, 14%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+.main{
+  background-color: #fff;
+}
+.ad-container{
+  padding-top: 20px;
+  padding-bottom: 100px;
+  display: flex;
+}
+.ad{
+  width: 55%;
+  margin-left: 125px;
+}
+
+.ad h1{
+  padding-top: 30px;
+  font-size: 75px;
+  font-weight:bold;
+  color: black;
+}
+.ad a{
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 25px;
+  padding: 10px 35px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.stat{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: rgb(240, 240, 240);
+  color: hsl(257, 7%, 63%);
+}
+.stat h1, h3{
+  color: hsl(255, 11%, 22%);
+}
+.stat-flex{
+  display: flex;
+}
+.stat-head{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cols{
+  background-color: #fff;
+  font-size:medium;
+  padding: 80px 30px 30px 30px;
+  /* margin: 10px; */
+}
+#fir{
+  border-bottom: 50px solid rgb(240, 240, 240);
+}
+#sec{
+  border-top: 50px solid rgb(240, 240, 240);
+  border-bottom: 25px solid rgb(240, 240, 240);
+  
+}
+#thir{
+  border-top: 100px solid rgb(240, 240, 240);
+}
+#line{
+  width: 70px;
+  padding: 0;
+  background-color: hsl(180, 66%, 49%);
+  border-top: 160px solid rgb(240, 240, 240);
+  border-bottom: 195px solid rgb(240, 240, 240);
+}
+
+.foot{
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url(images/bg-boost-desktop.svg);
+}
+.foot p{
+  font-size: large;
+}
+.foot a{
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 30px;
+  padding: 15px 55px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+footer{
+  padding-top: 50px;
+  background: hsl(260, 8%, 14%);
+  color: #fff;
+}
+footer a {
+  color: hsl(257, 7%, 63%);
+}
+footer a:hover{
+  color: hsl(180, 66%, 49%);
+}
+.socials a{
+  color: #fff;
+}
+.logo{
+  text-align: center;
+  color: #fff;
+}
+footer h5{
+  font-size: 17px;
+  font-weight: bold;
+}
+footer p{
+  font-size: 14px;
+}
+.socials{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.attribution{
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: small;
+}
+
+
+@media only screen and (max-width: 414px) {
+  .ad-container{
+    flex-direction: column-reverse;
+  }
+  .stat-flex{
+    flex-direction: column;
+  }
+  #line{
+    height: 100px;
+    width: 0;
+    padding: 4px;
+    background-color: hsl(180, 66%, 49%);
+    border-top: initial;
+    border-bottom: initial;
+    border-left: 151px solid rgb(240, 240, 240);
+    border-right: 151px solid rgb(240, 240, 240);
+  }
+  .cols{
+    background-color: #fff;
+    font-size:medium;
+    padding: 80px 30px 30px 30px;
+    /* margin: 10px; */
+  }
+  #fir{
+    border: none;
+  }
+  #sec{
+    border: none;
+    
+  }
+  #thir{
+    border: none;
+  }
+
+  .ad{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .ad h1{
+    padding-top: 30px;
+    font-size: 34px;
+    font-weight:bold;
+    color: black;
+  }
+  .ad p{
+    text-justify: auto;
+  }
+  .ad a{
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 25px;
+    padding: 10px 35px;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  footer{
+    text-align: center;
+  }
+  footer .logo{
+    padding-bottom: 30px;
+  }
+  footer .features{
+    padding-bottom: 10px;
+  }
+  footer .resources{
+    padding-bottom: 10px;
+  }
+  footer .company{
+    padding-bottom: 20px;
+  }
 }
