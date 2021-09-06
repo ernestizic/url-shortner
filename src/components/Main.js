@@ -3,6 +3,7 @@ import illus from '../images/illustration-working.svg';
 import brcog from '../images/icon-brand-recognition.svg'
 import idr from '../images/icon-detailed-records.svg'
 import ifc from '../images/icon-fully-customizable.svg'
+import UrlForm from './UrlForm';
 
 const Main = () => {
     return (
@@ -19,6 +20,7 @@ const Main = () => {
             </div>
 
             <div className='stat container-fluid'>
+                <UrlForm />
                 <div className='stat-head'>
                     <h1>Advanced Statistics</h1>
                     <p>Track how your links are performing across the web with <br/>
