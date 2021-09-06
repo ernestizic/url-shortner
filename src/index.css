@@ -245,6 +245,9 @@ form .url-form{
   padding: 15px;
   border-radius: 10px;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
 
 /* New link div */
 .new-link{
@@ -256,16 +259,27 @@ form .url-form{
   color: hsl(260, 8%, 14%);
   display: flex;
   justify-content: space-between;
+}.new-link a{
+  color: hsl(180, 66%, 49%);
 }
-.new-link .btn{
+
+.new-link button{
   margin-left: 20px;
   margin-top: -10px;
   background-color: hsl(180, 66%, 49%);
   color: #fff;
+  padding: 1px 25px; 
+  border: none;
+  border-radius: 10px;
+}
+.new-link button:focus{
+  outline: 0;
 }
 .new-link .copied{
   background-color: hsl(257, 27%, 26%);
 }
+
+
 .new-link .btn:hover{
   background-color: hsl(180, 33%, 70%);
 }
@@ -403,11 +417,14 @@ form .url-form{
   .copy-div{
     flex-direction: column;
   }
-  .new-link .btn{
+  .new-link button{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 0;
+    padding: 7px 25px; 
+    border: none;
+    border-radius: 5px;
   }
 
 }

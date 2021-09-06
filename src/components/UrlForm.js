@@ -30,8 +30,8 @@ const UrlForm = () => {
             <p>{url}</p>
             <div className='copy-div'>
                 <a href={`https://${shortLink.short_link}`} target="_blank" rel="noreferrer">{shortLink.short_link}</a>
-                {isCopied ? (<button className='btn copied'>Copied!</button>) : (
-                    <button className='btn' onClick={copy}>Copy</button>
+                {isCopied ? (<button className='copied'>Copied!</button>) : (
+                    <button onClick={copy}>Copy</button>
                 )}
                 
             </div>
