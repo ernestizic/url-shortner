@@ -12,7 +12,7 @@ const Main = () => {
                 <div className='ad'>
                     <h1>More than just shorter links</h1>
                     <p>Build your brand’s recognition and get detailed <br />insights on how your links are performing.</p>
-                    <a href='https://getstarted' className='btn'> Get Started </a>
+                    <a href='get started' className='btn'> Get Started </a>
                 </div>
                 <div className='ad-img'>
                     <img src={illus} alt='ad-img' className='img-fluid' />
@@ -67,7 +67,7 @@ const Main = () => {
 
             <div className='foot'>
                 <h1>Boost your links today</h1>
-                <a href='https://getstarted' className='btn'> Get Started </a>
+                <a href='getstarted' className='btn'> Get Started </a>
             </div>
             
         </div>

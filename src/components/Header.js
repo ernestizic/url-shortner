@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from '../images/logo.svg'
+import logo from '../images/logo.svg';
+import "animate.css";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,17 +17,17 @@ const Header = () => {
         <div className='collapse navbar-collapse' id='navbarNav'>
           <ul className='navbar-nav'>
             <li className='nav-item'>
-              <a className='nav-link' href='https://#'>
+              <a className='nav-link' href='features'>
                 Features
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='https://pricing'>
+              <a className='nav-link' href='pricing'>
                 Pricing
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='https://resources'>
+              <a className='nav-link' href='resources'>
                 Resources
               </a>
             </li>
@@ -34,12 +35,12 @@ const Header = () => {
 
           <ul className='navbar-nav ms-auto'>
             <li className='nav-item'>
-                <a className='nav-link' href='https://features'>
+                <a className='nav-link' href='login'>
                     Login
                 </a>
             </li>
             <li className='nav-item'>
-                <a className='nav-link signup' href='https://features'>
+                <a className='nav-link signup' href='signup'>
                     Sign Up
                 </a>
             </li>
@@ -50,28 +51,28 @@ const Header = () => {
     </nav>
 
     {/* Navbar for mobile screens */}
-    <div className={isMobile ? ('mini-nav') : ('no-display')}>
+    <div className={isMobile ? ('mini-nav animate__animated animate__fadeInDown') : ('no-display')}>
       <ul className='navbar-nav'>
         <li className='nav-item-2'>
-          <a className='nav-link' href='https://#'>Features</a>
+          <a className='nav-link' href='feat'>Features</a>
         </li>
         <li className='nav-item-2'>
-          <a className='nav-link' href='https://pricing'>Pricing</a>
+          <a className='nav-link' href='pricing'>Pricing</a>
         </li>
         <li className='nav-item-2'>
-          <a className='nav-link' href='https://resources'>Resources</a>
+          <a className='nav-link' href='resources'>Resources</a>
         </li>
       </ul>
       <hr />
 
       <ul className='navbar-nav'>
         <li className='nav-item-2'>
-            <a className='nav-link' href='https://features'>
+            <a className='nav-link' href='login'>
                 Login
             </a>
         </li>
         <li className='nav-item-2'>
-            <a className='nav-link signup' href='https://features'>
+            <a className='nav-link signup' href='signup'>
                 Sign Up
             </a>
         </li>
