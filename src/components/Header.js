@@ -51,7 +51,7 @@ const Header = () => {
     </nav>
 
     {/* Navbar for mobile screens */}
-    <div className={isMobile ? ('mini-nav animate__animated animate__fadeInDown') : ('no-display')}>
+    <div className={isMobile ? ('mini-nav animate__animated animate__fadeInDown animate__faster') : ('no-display')}>
       <ul className='navbar-nav'>
         <li className='nav-item-2'>
           <a className='nav-link' href='feat'>Features</a>

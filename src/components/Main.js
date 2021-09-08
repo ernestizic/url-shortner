@@ -68,6 +68,7 @@ const Main = () => {
             <div className='foot'>
                 <h1>Boost your links today</h1>
                 <a href='getstarted' className='btn'> Get Started </a>
+                
             </div>
             
         </div>

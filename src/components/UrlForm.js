@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import spinner from '../images/unnamed.gif';
 
 const UrlForm = () => {
     const [url,setUrl] = useState('')
     const [shortLink, setShortLink] = useState([]);
     //const [isCopied, setIsCopied] = useState(false);
-    const [isFieldEmpty, setIsFieldEmpty] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [isFieldEmpty, setIsFieldEmpty] = useState(false);
 
 
     const handleSubmit = async(e)=> {  
@@ -15,9 +17,11 @@ const UrlForm = () => {
                 setIsFieldEmpty(true)
             }else{
                 setIsFieldEmpty(false)
+                setIsLoading(true);
                 const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`);
                 const data = await res.json();
                 setShortLink([...shortLink, data.result]);
+                setIsLoading(false);
                 setUrl('')
             }
         } catch (err) {
@@ -56,21 +60,24 @@ const UrlForm = () => {
             </div>
         </div>} */}
 
+        {isLoading && 
+            <div className='spinner-class'>
+                <img src={spinner} alt='spinner'/>
+            </div>
+        }
+
         {shortLink.length ? (
-            shortLink.map(link => (
-                <div className='new-link' key={link.code}>
-                    <p onClick={()=> deleteLink(link.code)}>{link.original_link}</p>
-                    <div className='copy-div'>
-                        <a href={`https://${link.short_link2}`} target="_blank" rel="noreferrer">{link.short_link2}</a>
-                        {/* {isCopied ? (<button className='copied'>Copied!</button>) : (
-                            <button onClick={()=>copy(link.code)}>Copy</button>
-                        )} */}
-                        <button onClick={()=>copy(link.code)}>Copy</button>
-                        
+                shortLink.slice(0).reverse().map(link => (
+                    <div className='new-link' key={link.code}>
+                        <p onClick={()=> deleteLink(link.code)}>{link.original_link}</p>
+                        <div className='copy-div'>
+                            <a href={`https://${link.short_link2}`} target="_blank" rel="noreferrer">{link.short_link2}</a>
+                            <button onClick={()=>copy(link.code)}>Copy</button>   
+                        </div>
                     </div>
-                </div>
-            ))
-        ) : ('')}
+                ))
+            ) : ('')
+        }
         </>
     )
 }
