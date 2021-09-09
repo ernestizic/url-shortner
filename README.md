@@ -48,8 +48,6 @@ How to copy text to clipboard
     const copy =(code)=> {
         const copiedLink = shortLink.find(link => (link.code === code));
         navigator.clipboard.writeText(copiedLink.short_link2);
-        //setIsCopied(true);
-        
     }
 ```
 
