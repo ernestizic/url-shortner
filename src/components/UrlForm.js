@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import spinner from '../images/unnamed.gif';
 
 const UrlForm = () => {
     const [url,setUrl] = useState('')
     const [shortLink, setShortLink] = useState([]);
-    //const [isCopied, setIsCopied] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isFieldEmpty, setIsFieldEmpty] = useState(false);
+
+
+    useEffect(()=> {
+        const localData = localStorage.getItem("myLinks");
+        if(localData) {
+            setShortLink(JSON.parse(localData))
+        }
+    },[])
+
+    useEffect(() => {
+        localStorage.setItem("myLinks", JSON.stringify(shortLink));  
+    })
 
 
     const handleSubmit = async(e)=> {  
@@ -32,7 +43,6 @@ const UrlForm = () => {
     const copy =(code)=> {
         const copiedLink = shortLink.find(link => (link.code === code));
         navigator.clipboard.writeText(copiedLink.short_link2);
-        //setIsCopied(true);
         
     }
     const deleteLink =(code)=> {
@@ -49,16 +59,6 @@ const UrlForm = () => {
             {isFieldEmpty && <span className='error'>Please add a link</span>}
         </div>
 
-        {/* {shortLink && <div className='new-link'>
-            <p>{shortLink.original_link}</p>
-            <div className='copy-div'>
-                <a href={`https://${shortLink.short_link2}`} target="_blank" rel="noreferrer">{shortLink.short_link2}</a>
-                {isCopied ? (<button className='copied'>Copied!</button>) : (
-                    <button onClick={copy}>Copy</button>
-                )}
-                
-            </div>
-        </div>} */}
 
         {isLoading && 
             <div className='spinner-class'>
