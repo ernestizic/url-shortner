@@ -6,6 +6,7 @@ const UrlForm = () => {
     const [shortLink, setShortLink] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isFieldEmpty, setIsFieldEmpty] = useState(false);
+    // const [isCopied, setIsCopied] = useState(false)
 
 
     useEffect(()=> {
@@ -43,6 +44,11 @@ const UrlForm = () => {
     const copy =(code)=> {
         const copiedLink = shortLink.find(link => (link.code === code));
         navigator.clipboard.writeText(copiedLink.short_link2);
+
+        // setIsCopied(true)
+        // setTimeout(() => {
+        //     setIsCopied(false)
+        // }, 2000);
         
     }
     const deleteLink =(code)=> {
@@ -69,7 +75,7 @@ const UrlForm = () => {
         {shortLink.length ? (
                 shortLink.slice(0).reverse().map(link => (
                     <div className='new-link' key={link.code}>
-                        <p onClick={()=> deleteLink(link.code)}>{link.original_link}</p>
+                        <p onClick={()=> deleteLink(link.code)} className='original-link'>{link.original_link}</p>
                         <div className='copy-div'>
                             <a href={`https://${link.short_link2}`} target="_blank" rel="noreferrer">{link.short_link2}</a>
                             <button onClick={()=>copy(link.code)}>Copy</button>   
